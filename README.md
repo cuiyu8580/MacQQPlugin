@@ -3,6 +3,12 @@
 [![GitHub license](https://img.shields.io/github/license/cuiyu8580/MacQQPlugin.svg)](./LICENSE)
 
 # QQ助手 v1.0.0
+
+## 说明
+
+
+原有项目 QQPlugin-macOS 的更新，macQQ插件神器。
+
 ---
 
 ## 功能
@@ -21,7 +27,6 @@
 ---
 ### 安装
 
-~~第一次安装需要输入密码，仅是为了获取写入微信文件夹的权限~~
 
 #### 1. 需要安装Git
 

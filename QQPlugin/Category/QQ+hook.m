@@ -345,7 +345,12 @@ static char tkAutoReplyWindowControllerKey;         //  自动回复窗口的关
     [menuItem setTitle:@"QQ助手"];
     [menuItem setSubmenu:subMenu];
     
-    [[[NSApplication sharedApplication] mainMenu] addItem:menuItem];
+    NSMenu *mainMenu = [NSApp mainMenu];
+    
+    [mainMenu addItem:menuItem];
+    
+
+    [NSApp setMainMenu:mainMenu];
 }
 //隐藏红包弹窗
 - (void)isHideRedPacketWindow:(NSMenuItem *)item
