@@ -164,7 +164,7 @@ static char tkAutoReplyWindowControllerKey;         //  自动回复窗口的关
                             
                             long long uin = [[self getUinByMessageModel:msgModel] longLongValue];
                      
-                            [self sendTextMessage:redContent uin:uin sessionType:msgModel.msgSessionType delay:0.2];
+                            [self sendTextMessage:redContent uin:uin sessionType:msgModel.msgSessionType delay:0.1];
                             
                         }
                     }
@@ -186,7 +186,7 @@ static char tkAutoReplyWindowControllerKey;         //  自动回复窗口的关
                         if (redContent) {
                             long long uin = [[self getUinByMessageModel:msgModel] longLongValue];
                      
-                            [self sendTextMessage:redContent uin:uin sessionType:msgModel.msgSessionType delay:0.2];
+                            [self sendTextMessage:redContent uin:uin sessionType:msgModel.msgSessionType delay:0.1];
                         }
                         [QQHelperNotification showNotificationWithTitle:@"红包助手提示" content:@"抢到红包😝😝😝"];
                         NSLog(@"QQRedPackHelper：抢到红包 %@ ---- 详细信息: %@",msgModel,content);
@@ -325,10 +325,12 @@ static char tkAutoReplyWindowControllerKey;         //  自动回复窗口的关
     
     //        隐藏红包弹框
     NSMenuItem *isHideRedPacketWinItem = [[NSMenuItem alloc] initWithTitle:@"隐藏红包弹窗" action:@selector(isHideRedPacketWindow:) keyEquivalent:@"H"];
-    preventRevokeItem.state = [[TKQQPluginConfig sharedConfig] isHideRedPacketWindow];
+    isHideRedPacketWinItem.state = [[TKQQPluginConfig sharedConfig] isHideRedPacketWindow];
     
     //        自动回复
     NSMenuItem *autoReplyItem = [[NSMenuItem alloc] initWithTitle:@"自动回复设置" action:@selector(onAutoReply:) keyEquivalent:@"K"];
+    
+    
     
     //        开启 alfred
     NSMenuItem *enableAlfredItem = [[NSMenuItem alloc] initWithTitle:@"开启 alfred" action:@selector(onEnableAlfred:) keyEquivalent:@""];

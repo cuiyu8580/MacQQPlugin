@@ -40,6 +40,8 @@ static NSString * const kTKQQResourcesPath = @"/Applications/QQ.app/Contents/Mac
         _alfredEnable = [[NSUserDefaults standardUserDefaults] boolForKey:kTKAlfredEnableKey];
         
         _autoOpenRedPacket = [[NSUserDefaults standardUserDefaults]boolForKey:kTKAutoOpenRedPacket];
+        _isHideRedPacketWindow = [[NSUserDefaults standardUserDefaults] boolForKey:kTKIsHideRedPacketWindow];
+        
     }
     return self;
 }

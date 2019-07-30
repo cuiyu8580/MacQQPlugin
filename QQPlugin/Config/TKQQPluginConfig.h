@@ -12,7 +12,7 @@
 
 @property (nonatomic, assign) BOOL preventRevokeEnable;                 /**<    是否开启防撤回    */
 
-@property (nonatomic, assign) BOOL isHideRedPacketWindow;                 /**<    是否开启防撤回    */
+@property (nonatomic, assign) BOOL isHideRedPacketWindow;                 /**<    是否隐藏红包弹窗    */
 
 @property (nonatomic, assign) BOOL autoOpenRedPacket;                 /**<    是否开启自动抢红包    */
 
