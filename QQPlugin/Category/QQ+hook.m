@@ -152,7 +152,7 @@ static char tkAutoReplyWindowControllerKey;         //  自动回复窗口的关
                    
                     NSString * content = [msgModel performSelector:@selector(content)];
                     NSDictionary * contentDic = [NSJSONSerialization JSONObjectWithData:[content dataUsingEncoding:NSUTF8StringEncoding] options:0 error:nil];
-                    NSString *title = [contentDic objectForKey:@"title"];
+                    //NSString *title = [contentDic objectForKey:@"title"];
                     NSString *msgType = [NSString stringWithFormat:@"%@",[contentDic objectForKey:@"msgType"]];
                    
                     [NSClassFromString(@"RedPackHelper") openRedPackWithMsgModel:msgModel operation:0];
@@ -164,7 +164,7 @@ static char tkAutoReplyWindowControllerKey;         //  自动回复窗口的关
                             
                             long long uin = [[self getUinByMessageModel:msgModel] longLongValue];
                      
-                            [self sendTextMessage:redContent uin:uin sessionType:msgModel.msgSessionType delay:0];
+                            [self sendTextMessage:redContent uin:uin sessionType:msgModel.msgSessionType delay:0.2];
                             
                         }
                     }
@@ -175,7 +175,7 @@ static char tkAutoReplyWindowControllerKey;         //  自动回复窗口的关
                     // 群红包处理逻辑
                     NSString * content = [msgModel performSelector:@selector(content)];
                     NSDictionary * contentDic = [NSJSONSerialization JSONObjectWithData:[content dataUsingEncoding:NSUTF8StringEncoding] options:0 error:nil];
-                    NSString *title = [contentDic objectForKey:@"title"];
+                    //NSString *title = [contentDic objectForKey:@"title"];
                     NSString *msgType = [NSString stringWithFormat:@"%@",[contentDic objectForKey:@"msgType"]];
                    
                     [NSClassFromString(@"RedPackHelper") openRedPackWithMsgModel:msgModel operation:0];
@@ -186,7 +186,7 @@ static char tkAutoReplyWindowControllerKey;         //  自动回复窗口的关
                         if (redContent) {
                             long long uin = [[self getUinByMessageModel:msgModel] longLongValue];
                      
-                            [self sendTextMessage:redContent uin:uin sessionType:msgModel.msgSessionType delay:0];
+                            [self sendTextMessage:redContent uin:uin sessionType:msgModel.msgSessionType delay:0.2];
                         }
                         [QQHelperNotification showNotificationWithTitle:@"红包助手提示" content:@"抢到红包😝😝😝"];
                         NSLog(@"QQRedPackHelper：抢到红包 %@ ---- 详细信息: %@",msgModel,content);

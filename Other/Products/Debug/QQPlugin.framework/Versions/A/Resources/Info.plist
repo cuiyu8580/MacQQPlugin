@@ -9,7 +9,7 @@
 	<key>CFBundleExecutable</key>
 	<string>QQPlugin</string>
 	<key>CFBundleIdentifier</key>
-	<string>tk.QQPlugin</string>
+	<string>mac.QQPlugin</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -17,7 +17,7 @@
 	<key>CFBundlePackageType</key>
 	<string>FMWK</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.2</string>
+	<string>1.0.0</string>
 	<key>CFBundleSupportedPlatforms</key>
 	<array>
 		<string>MacOSX</string>
